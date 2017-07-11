@@ -4,6 +4,8 @@
          <meta charset="utf-8">
          <title>D3 Project</title>
          <script type="text/javascript" src="d3/d3.js"></script>
+         <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+         <script type="text/javascript" src="d3/circle.js"></script>
       </head>
       <body>
       <style type="text/css">
@@ -16,53 +18,5 @@
          }
 
       </style>
-         <script type="text/javascript">
-         var w = 500;
-         var h = 500;
-         var barPadding = 1;
-         var svg = d3.select("body")
-                     .append("svg")
-                     .attr("width", w)
-                     .attr("height", h);
-
-         var dataset = [20, 32, 43, 10, 11, 89];
-
-
-         var bars = svg.selectAll("rect")
-                        .data(dataset)
-                        .enter()
-                        .append("rect")
-                        .attr("x", function(d, i){
-                           return i*(w/dataset.length);
-                        })
-                        .attr("y", function(d){
-                           return h - (d*4);
-                        })
-                        .attr("height", function(d, i){
-                           return d*4;
-                        })
-                        .attr("width", w/dataset.length - barPadding)
-                        .attr("fill", function(d, i){
-                           var color = "rgb(0,0,"+(d*10)+")";
-                           return color;
-                        });
-
-         var text = svg.selectAll("text")
-                        .data(dataset)
-                        .enter()
-                        .append("text")
-                        .text(function(d){
-                           return d;
-                        })
-                        .attr("x", function(d, i){
-                           return i * (w / dataset.length)+20;
-                        })
-                         .attr("y", function(d) {
-                           return h - (d * 4)+15;
-                        })
-                         .attr("fill", "white")
-
-
-         </script>
       </body>
 </html>
