@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+   <html lang="en">
+      <head>
+         <meta charset="utf-8">
+         <title>D3 Project</title>
+         <script type="text/javascript" src="d3/d3.js"></script>
+         <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+         <script type="text/javascript" src="d3/path.js"></script>
+      </head>
+      <body>
+      <style type="text/css">
+         div.bar {
+            display: inline-block;
+            width: 20px;
+            height: 75px;   /* この数値は実行時に上書きされます */
+            background-color: teal;
+            margin-right: 2px;
+         }
+         .axis text {
+          font: 10px sans-serif;
+        }
+
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: #000;
+          stroke-width: 2;
+          shape-rendering: crispEdges;
+        }
+        .axis text {
+          font: 10px sans-serif;
+        }
+ 
+        .axis path {
+        /*
+        fillとopacityで半透明な背景色。
+        */
+          fill: Aquamarine;
+          opacity: 0.1;
+          stroke: #000;
+          stroke-width: 1;
+          shape-rendering: crispEdges;
+        }
+ 
+        .axis line {
+          stroke: #000;
+          stroke-width: 1;
+          shape-rendering: crispEdges;
+        }
+ 
+        .line {
+         /*fill: none;で線の色をnoneにしている！*/
+          fill: none;
+          stroke: DarkGreen;
+          stroke-width: 1.5px;
+        }
+
+      </style>
+      </body>
+</html>
