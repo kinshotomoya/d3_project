@@ -8,6 +8,7 @@
          <script type="text/javascript" src="d3/circle.js"></script>
          <script type="text/javascript" src="d3/scale.js"></script>
          <script type="text/javascript" src="d3/axis.js"></script>
+         <script type="text/javascript" src="d3/path.js"></script>
       </head>
       <body>
       <style type="text/css">
@@ -28,6 +29,33 @@
           stroke: #000;
           stroke-width: 2;
           shape-rendering: crispEdges;
+        }
+        .axis text {
+          font: 10px sans-serif;
+        }
+ 
+        .axis path {
+        /*
+        fillとopacityで半透明な背景色。
+        */
+          fill: Aquamarine;
+          opacity: 0.1;
+          stroke: #000;
+          stroke-width: 1;
+          shape-rendering: crispEdges;
+        }
+ 
+        .axis line {
+          stroke: #000;
+          stroke-width: 1;
+          shape-rendering: crispEdges;
+        }
+ 
+        .line {
+         /*fill: none;で線の色をnoneにしている！*/
+          fill: none;
+          stroke: DarkGreen;
+          stroke-width: 1.5px;
         }
 
       </style>
